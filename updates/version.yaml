@@ -1,0 +1,4 @@
+1.0.1:
+  - First version of flashmessage
+  - Run table migrations
+  - create_settings_table.php

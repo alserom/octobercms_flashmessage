@@ -1,0 +1,19 @@
+<?php Block::put('breadcrumb') ?>
+    <ul>
+        <li><a href="<?= Backend::url('romanov/flashmessage/settings') ?>"><?= e(trans('romanov.flashmessage::lang.settings.title')) ?></a></li>
+        <li><?= e(trans('romanov.flashmessage::lang.settings.preview')) ?></li>
+    </ul>
+<?php Block::endPut() ?>
+
+<?php if (!$this->fatalError): ?>
+
+    <div class="form-preview">
+        <?= $this->formRenderPreview() ?>
+    </div>
+
+<?php else: ?>
+
+    <p class="flash-message static error"><?= e($this->fatalError) ?></p>
+    <p><a href="<?= Backend::url('romanov/flashmessage/settings') ?>" class="btn btn-default">Return to settings list</a></p>
+
+<?php endif ?>

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Setting
+
+# Model Form Field configuration
+form: $/romanov/flashmessage/models/setting/fields.yaml
+
+# Model Class name
+modelClass: Romanov\Flashmessage\Models\Setting
+
+# Default redirect location
+defaultRedirect: romanov/flashmessage/settings
+
+# Create page
+create:
+    title: romanov.flashmessage::lang.settings.new
+    redirect: romanov/flashmessage/settings/update/:id
+    redirectClose: romanov/flashmessage/settings
+
+# Update page
+update:
+    title: romanov.flashmessage::lang.settings.edit
+    redirect: romanov/flashmessage/settings
+    redirectClose: romanov/flashmessage/settings
+
+# Preview page
+preview:
+    title: romanov.flashmessage::lang.settings.preview

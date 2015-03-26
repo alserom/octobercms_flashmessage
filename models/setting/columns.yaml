@@ -1,0 +1,7 @@
+columns:
+    id:
+        label: ID
+        searchable: true
+    title:
+        label: romanov.flashmessage::lang.settings.name
+        searchable: true

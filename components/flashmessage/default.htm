@@ -1,0 +1,9 @@
+<script>
+{% if __SELF__.flag == true %}
+document.flashflag = true;
+{%else%}
+document.flashflag = false;
+{% endif %}
+document.romanov_flashoptions = {{ __SELF__.options|json_encode|raw }};
+document.romanov_flashsettings = {{ __SELF__.settings|json_encode|raw }};
+</script>

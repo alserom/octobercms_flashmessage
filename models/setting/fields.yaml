@@ -1,0 +1,101 @@
+fields:
+    title:
+        label: romanov.flashmessage::lang.settings.name
+        required: required
+    options_section:
+        label: Options
+        type: section
+        comment: Documentation - http://bootstrap-notify.remabledesigns.com/#documentation-options
+    options[icon]:
+        label: icon
+        comment: class or src. This is the icon that will be displayed within the notify notification. This icon can either be a class (Font Icon) or an image url. Please keep in mind if you wish to use an image url that you must set icon_type to img in the options.
+    options[title]:
+        label: title
+        comment: This is the title that will be displayed within the notify notification. Please keep in mind unless you style the [data-notify="title"] in css this will look identical to the message.
+    options[message]:
+        label: message
+        comment: This is the message that will be displayed within the notify notification.
+    options[url]:
+        label: url
+        comment: If this value is set it will make the entire notify (except the close button) a clickable area. If the user clicks on this area it will take them to the url specified here.
+    options[target]:
+        label: target
+        comment: The target attribute specifies where to open the linked notification (_blank, _self, _parent, _top).
+    settings_section:
+        label: Settings
+        type: section
+        comment: Documentation - http://bootstrap-notify.remabledesigns.com/#documentation-settings
+    settings[element]:
+        label: element
+        comment: Appends the notification to a specific element. If the element is set to anything other than the body of a document it switches from a position: fixed to position: absolute.
+    settings[position]:
+        label: position
+        comment: Allows users to specify a custom position to the notification container element(static | fixed | relative | absolute).
+    settings[type]:
+        label: type
+        comment: Defines the style of the notification using bootstraps native alert styles. Please keep in mind that when the notification is generated the type gets prefixed with alert-. When using native alert styles this will not be an issue, but if you create a new style such as pink when setting up the css you have to use the class alert-pink.
+    settings[allow_dismiss]:
+        label: allow_dismiss
+        comment: If this value is set to false it will hide the data-grow="dismiss" element. Please keep in mind if you modify the template setting and do not include a data-notify="dismiss" element even with this set to true there will be no element for a user to click to close the notification.
+        type: switch
+        default: true
+    settingsplacement[from]:
+        label: placement.from
+        comment: This controls where if the notification will be placed at the top or bottom of your element.
+    settingsplacement[align]:
+        label: placement.align
+        comment: This controls if the notification will be placed in the left, center or right side of the element.
+    settings[offset]:
+        label: offset
+        comment: This adds padding in pixels between the element and the notification creating a space between their edges.
+    settingsoffset[x]:
+        label: offset.x
+        comment: This adds adding on the x axis in pixels between the element and the notification creating a space between their edges.
+    settingsoffset[y]:
+        label: offset.y
+        comment: This adds padding on the y axis in pixels between the element and the notification creating a space between their edges.
+    settings[spacing]:
+        label: spacing
+        comment: This adds a padding in pixels between notifications with the same placement creating a space between their edges.
+    settings[z_index]:
+        label: z_index
+        comment: Pretty simple, this sets the css property z-index for the notification. You may have to raise this number if you have other elements overlapping the notification.
+    settings[delay]:
+        label: delay
+        comment: If delay is set higher than 0 then the notification will auto-close after the delay period is up. Please keep in mind that delay uses milliseconds so 5000 is 5 seconds.
+    settings[timer]:
+        label: timer
+        comment: This is the amount of milliseconds removed from the notify at every timer milliseconds. So to make that a little less confusing every 1000 milliseconds there will be 1000 milliseconds removed from the remaining time of the notify delay. If this is set higher then delay the notify will not be removed until timer has run out.
+    settings[url_target]:
+        label: url_target
+        comment: This sets the target of the url for a notification. please check HTML <a> target Attribute to learn more about these options(_blank | _self | _parent | _top).
+    settings[mouse_over]:
+        label: mouse_over
+        comment: By default this does nothing. If you set this option to pause it will pause the timer on the notification delay. Since version 2.0.0 the timer will not reset it will continue from it's last tick.
+    settingsanimate[enter]:
+        label: animate.enter
+        comment: This will control the animation used to bring the generate the notification on screen. Since version 2.0.0 all animations are controlled using css. This plugin is not com packaged with any animations. Please use Animate.css by Daniel Eden or you can always write your own css animations.
+    settingsanimate[exit]:
+        label: animate.exit
+        comment: This will control the animation used to bring the generate the notification on screen. Since version 2.0.0 all animations are controlled using css. This plugin is not com packaged with any animations. Please use Animate.css by Daniel Eden or you can always write your own css animations.
+    settings[onShow]:
+        label: onShow
+        comment: This event fires immediately when the show instance method is called.
+    settings[onShown]:
+        label: onShown
+        comment: This event is fired when the modal has been made visible to the user (will wait for CSS transitions to complete).
+    settings[onClose]:
+        label: onClose
+        comment: This event is fired immediately when the notification is closing.
+    settings[onClosed]:
+        label: onClosed
+        comment: This event is fired when the modal has finished closing and is removed from the document (will wait for CSS transitions to complete).
+    settings[icon_type]:
+        label: icon_type
+        comment: This is used to let the plugin know if you are using an icon font for images or if you are using image. If this setting is not set to class it will assume you are using an img. Please keep in mind if you are using an image you to set icon to the src of the image.
+    settings[template]:
+        label: template
+        comment: Since version 3.0.0 the template option has been revamped in hopes of giving users more control over the layout. Please find the code for the default template below.
+        type: codeeditor
+        size: huge
+        language: html
