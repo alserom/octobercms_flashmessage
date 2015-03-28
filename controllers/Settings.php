@@ -2,6 +2,7 @@
 
 use BackendMenu;
 use Backend\Classes\Controller;
+use System\Classes\SettingsManager;
 
 class Settings extends Controller
 {
@@ -17,7 +18,8 @@ class Settings extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Romanov.Flashmessage', 'flashmessage', 'settings');
+        BackendMenu::setContext('October.System', 'system', 'settings');
+        SettingsManager::setContext('Romanov.Flashmessage', 'settings');
     }
 
 

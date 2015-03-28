@@ -13,7 +13,7 @@ return [
         'title' => 'Flash messages settings',
         'new' => 'Add configuration',
         'preview' => 'Preview',
-        'edit' => 'Edin',
+        'edit' => 'Edit',
         'name' => 'Configuration name',
     ],
 

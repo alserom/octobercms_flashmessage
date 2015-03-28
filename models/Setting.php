@@ -5,6 +5,7 @@ use Lang;
 class Setting extends Model
 {
     use \October\Rain\Database\Traits\Validation;
+
     public $table = 'romanov_flashmessage_settings';
     public $rules = [
         'title' => 'required',
