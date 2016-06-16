@@ -1,21 +1,5 @@
 $(window).on('ajaxErrorMessage', function(event, message){
     event.preventDefault();
-    /*if(document.flashflag){
-        document.romanov_flashoptions.message = message;
-        document.romanov_flashsettings.type = 'danger';
-        $.notify(document.romanov_flashoptions, document.romanov_flashsettings);
-    }else{
-        $.notify({
-            message: message
-        },{
-            type: 'danger',
-            placement: {
-                from: "top",
-                align: "center"
-            },
-            delay: 10000
-        });
-    }*/
 });
 
 $(window).on('ajaxError', function(event, obj, context, status) {
