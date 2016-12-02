@@ -4,3 +4,6 @@
   - create_settings_table.php
 1.0.2:
   - Fix some bug with Rainlab.User login form errors
+1.0.3:
+  - fastfix
+  
