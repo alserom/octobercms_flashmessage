@@ -82,11 +82,26 @@ class FlashMessage extends ComponentBase
     }
 
     private function combineSettings($data){
-        $res['options'] = $this->checkArray(json_decode($data['options'],true));
-        $s = json_decode($data['settings'],true);
-        $sp = json_decode($data['settingsplacement'],true);
-        $so = json_decode($data['settingsoffset'],true);
-        $sa = json_decode($data['settingsanimate'],true);
+        if (!is_array($data['options'])) {
+            $data['options'] = json_decode($data['options'],true);
+        }
+        if (!is_array($data['settings'])) {
+            $data['settings'] = json_decode($data['settings'],true);
+        }
+        if (!is_array($data['settingsplacement'])) {
+            $data['settingsplacement'] = json_decode($data['settingsplacement'],true);
+        }
+        if (!is_array($data['settingsoffset'])) {
+            $data['settingsoffset'] = json_decode($data['settingsoffset'],true);
+        }
+        if (!is_array($data['settingsanimate'])) {
+            $data['settingsanimate'] = json_decode($data['settingsanimate'],true);
+        }
+        $res['options'] = $this->checkArray($data['options']);
+        $s = $data['settings'];
+        $sp = $data['settingsplacement'];
+        $so = $data['settingsoffset'];
+        $sa = $data['settingsanimate'];
         $s['placement'] = $sp;
         $s['animate'] = $sa;
         if(!$s['offset']) $s['offset'] = $so;
